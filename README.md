@@ -59,7 +59,8 @@ The application:
 
 ## Learn More
 
-For more information about this project, check out my article: (Checking the Time and Date with My Brain)[https://medium.com/@suryasure734/checking-the-time-and-date-with-my-brain-956ee1e11d84?source=user_profile_page---------3-------------3213a50aa3d----------------------]
+For more information about this project, check out my article: [Checking the Time and Date with My Brain
+](https://medium.com/@suryasure734/checking-the-time-and-date-with-my-brain-956ee1e11d84?source=user_profile_page---------3-------------3213a50aa3d----------------------)
 
 ## Customization
 
