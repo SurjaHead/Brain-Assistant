@@ -31,9 +31,9 @@ pip install brainflow numpy pyttsx3
 1. Connect your EEG device (configured for COM5 by default)
 2. Run the script:
 
-````
+```
 python brain_wave_analyzer.py
-```-
+```
 
 3. The program will:
    - Collect 10 seconds of EEG data
@@ -69,4 +69,3 @@ You can modify the following parameters in the code:
 - Filtering parameters
 - Alpha and beta thresholds for audio feedback
 - Audio response content
-````
