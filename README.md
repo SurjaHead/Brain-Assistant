@@ -2,11 +2,11 @@
 
 ## Overview
 
-[1]This project uses BrainFlow to analyze brain wave data, specifically focusing on alpha and beta wave bands. It captures EEG data, processes it through various filters, and can trigger audio responses based on the measured brain wave activity.
+This project uses BrainFlow to analyze brain wave data, specifically focusing on alpha and beta wave bands. It captures EEG data, processes it through various filters, and can trigger audio responses based on the measured brain wave activity.
 
 ## Features
 
-- [2]Real-time EEG data collection using BrainFlow
+- Real-time EEG data collection using BrainFlow
 - Signal processing with bandpass and bandstop filters
 - Power spectrum density analysis using Welch's method
 - Alpha and beta wave band power calculation
@@ -14,7 +14,7 @@
 
 ## Requirements
 
-[3]- Python
+Python
 
 - BrainFlow
 - NumPy
@@ -29,7 +29,7 @@ pip install brainflow numpy pyttsx3
 
 ## Usage
 
-[4]1. Connect your EEG device (configured for COM5 by default) 2. Run the script:
+1. Connect your EEG device (configured for COM5 by default) 2. Run the script:
 
 ```
 python brain_wave_analyzer.py
