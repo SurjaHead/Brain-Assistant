@@ -14,8 +14,7 @@ This project uses BrainFlow to analyze brain wave data, specifically focusing on
 
 ## Requirements
 
-Python
-
+- Python
 - BrainFlow
 - NumPy
 - pyttsx3
@@ -29,11 +28,12 @@ pip install brainflow numpy pyttsx3
 
 ## Usage
 
-1. Connect your EEG device (configured for COM5 by default) 2. Run the script:
+1. Connect your EEG device (configured for COM5 by default)
+2. Run the script:
 
-```
+````
 python brain_wave_analyzer.py
-```
+```-
 
 3. The program will:
    - Collect 10 seconds of EEG data
@@ -45,7 +45,7 @@ python brain_wave_analyzer.py
 
 ## How It Works
 
-[5]The application:
+The application:
 
 1. Initializes a connection to the EEG board
 2. Captures brain wave data for 10 seconds
@@ -59,13 +59,14 @@ python brain_wave_analyzer.py
 
 ## Learn More
 
-For more information about this project, check out my article: [Link to your article]
+For more information about this project, check out my article: [https://medium.com/@suryasure734/checking-the-time-and-date-with-my-brain-956ee1e11d84?source=user_profile_page---------3-------------3213a50aa3d----------------------]
 
 ## Customization
 
-[6]You can modify the following parameters in the code:
+You can modify the following parameters in the code:
 
 - Board ID and serial port
 - Filtering parameters
 - Alpha and beta thresholds for audio feedback
 - Audio response content
+````
