@@ -1,72 +1,85 @@
-# Brain Assistant
+<div align="center">
+<h1 align="center">Brain Assistant</h1>
 
-## Overview
+  <p align="center">
+    Analyzes EEG data to trigger audio responses based on brain wave activity.
+  </p>
+</div>
 
-This project uses BrainFlow to analyze brain wave data, specifically focusing on alpha and beta wave bands. It captures EEG data, processes it through various filters, and can trigger audio responses based on the measured brain wave activity.
+## Table of Contents
 
-## Features
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
 
-- Real-time EEG data collection using BrainFlow
-- Signal processing with bandpass and bandstop filters
-- Power spectrum density analysis using Welch's method
-- Alpha and beta wave band power calculation
-- Audio feedback based on brain wave activity using pyttsx3
+## About The Project
 
-## Requirements
+This project uses BrainFlow to capture and analyze EEG data, focusing on alpha and beta wave bands. It processes the data with filters and triggers audio feedback based on the measured brain wave activity.  The application initializes a connection to an EEG board, captures brain wave data for 10 seconds, applies detrending, calculates power spectral density using Welch's method, applies bandstop and bandpass filters, calculates power in the alpha and beta bands, and provides audio feedback based on the measured values.
+
+### Key Features
+
+- **Real-time EEG data collection:** Uses BrainFlow to capture EEG data from a connected device.
+- **Signal Processing:** Applies bandpass and bandstop filters to clean and isolate relevant frequency bands.
+- **Power Spectrum Density Analysis:** Calculates power spectrum density using Welch's method.
+- **Alpha and Beta Wave Analysis:** Calculates power in the alpha (7-13 Hz) and beta (14-30 Hz) bands.
+- **Audio Feedback:** Provides audio feedback using pyttsx3 based on alpha and beta power levels.
+
+## Built With
 
 - Python
 - BrainFlow
 - NumPy
 - pyttsx3
-- Compatible EEG device (currently configured for board_id 1)
 
-## Installation
+## Getting Started
 
-```
-pip install brainflow numpy pyttsx3
-```
+To get started with this project, you need to install the required libraries and connect a compatible EEG device.
 
-## Usage
+### Prerequisites
 
-1. Connect your EEG device (configured for COM5 by default)
-2. Run the script:
+- Python
+- BrainFlow:
+  ```sh
+  pip install brainflow
+  ```
+- NumPy:
+  ```sh
+  pip install numpy
+  ```
+- pyttsx3:
+  ```sh
+  pip install pyttsx3
+  ```
 
-```
-python brain_wave_analyzer.py
-```
+### Installation
 
-3. The program will:
-   - Collect 10 seconds of EEG data
-   - Process the signals with appropriate filters
-   - Calculate alpha and beta band powers
-   - Speak the current date if alpha power is below 10
-   - Speak the current time if beta power is above 5
-   - Validate the alpha/beta ratio
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/surjahead/brain-assistant.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd brain-assistant
+   ```
+3. Connect your EEG device (configured for COM5 by default, can be changed in `main.py`).
+4. Run the script:
+   ```sh
+   python main.py
+   ```
 
-## How It Works
+## Acknowledgments
 
-The application:
-
-1. Initializes a connection to the EEG board
-2. Captures brain wave data for 10 seconds
-3. Applies detrending to the EEG signal
-4. Calculates power spectral density using Welch's method
-5. Applies specific filters to each EEG channel:
-   - Bandstop filter (58-62 Hz) to remove power line noise
-   - Bandpass filter (11-31 Hz) to focus on relevant frequencies
-6. Calculates power in the alpha (7-13 Hz) and beta (14-30 Hz) bands
-7. Provides audio feedback based on the measured values
-
-## Learn More
-
-For more information about this project, check out my article: [Checking the Time and Date with My Brain
-](https://medium.com/@suryasure734/checking-the-time-and-date-with-my-brain-956ee1e11d84?source=user_profile_page---------3-------------3213a50aa3d----------------------)
-
-## Customization
-
-You can modify the following parameters in the code:
-
-- Board ID and serial port
-- Filtering parameters
-- Alpha and beta thresholds for audio feedback
-- Audio response content
+- This project was created using the OpenBCI Ganglion Board and the BrainFlow documentation.
